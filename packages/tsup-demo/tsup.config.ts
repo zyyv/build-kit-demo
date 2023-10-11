@@ -4,7 +4,6 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: [
     'src/index.ts',
-    'src/log.ts',
   ],
   splitting: false,
   clean: true,

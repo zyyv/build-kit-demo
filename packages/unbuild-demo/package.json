@@ -2,19 +2,42 @@
   "name": "unbuild-demo",
   "type": "module",
   "version": "0.0.0",
-  "description": "",
-  "author": "",
+  "description": "unbuild demo",
+  "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
-  "keywords": [],
+  "homepage": "https://github.com/zyyv/build-kit-demo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyv/build-kit-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyyv/build-kit-demo/issues"
+  },
+  "keywords": [
+    "build-kit",
+    "tsuo"
+  ],
+  "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./*": "./*"
   },
   "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
   "scripts": {
     "dev": "unbuild --stub",
     "build": "unbuild"

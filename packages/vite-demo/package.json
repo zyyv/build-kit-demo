@@ -1,12 +1,41 @@
 {
   "name": "vite-demo",
+  "type": "module",
   "version": "0.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
+  "description": "vite demo",
+  "author": "Chris <https://github.com/zyyv>",
+  "license": "MIT",
+  "homepage": "https://github.com/zyyv/build-kit-demo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyv/build-kit-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyyv/build-kit-demo/issues"
+  },
+  "keywords": [
+    "build-kit",
+    "vite"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "dev": "tsc --noEmit && vite build --watch",
     "build": "tsc --noEmit && vite build"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^3.6.0"
   }
 }

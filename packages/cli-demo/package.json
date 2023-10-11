@@ -1,8 +1,8 @@
 {
-  "name": "tsup-demo",
+  "name": "cli-demo",
   "type": "module",
   "version": "0.0.0",
-  "description": "tsup demo",
+  "description": "cli demo",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
   "homepage": "https://github.com/zyyv/build-kit-demo#readme",
@@ -14,33 +14,34 @@
     "url": "https://github.com/zyyv/build-kit-demo/issues"
   },
   "keywords": [
-    "build-kit",
-    "tsup"
+    "cli",
+    "cli-demo"
   ],
   "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
+  "bin": {
+    "cliDemo": "./bin/cli.mjs"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup"
+    "build": "unbuild",
+    "dev": "unbuild --stub"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "cac": "^6.7.14",
+    "consola": "^3.2.3",
+    "picocolors": "^1.0.0"
   }
 }
