@@ -1,8 +1,13 @@
 import { defineConfig } from 'tsup'
 
+// https://tsup.egoist.dev/
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: [
+    'src/index.ts',
+    'src/log.ts',
+  ],
   splitting: false,
-  sourcemap: true,
   clean: true,
+  dts: true,
+  format: ['cjs', 'esm', 'iife'],
 })
