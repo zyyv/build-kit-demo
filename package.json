@@ -7,13 +7,14 @@
   "scripts": {
     "lint": "eslint --cache .",
     "lint:fix": "eslint lint --fix",
-    "release": "bumpp -r",
     "build": "run-s build:*",
-    "build:tsup": "npm -C packages/tsup-demo run build",
-    "build:unbuild": "npm -C packages/unbuild-demo run build",
-    "build:vite": "npm -C packages/vite-demo run build",
-    "build:cli": "npm -C packages/cli-demo run build",
-    "build:nest": "npm -C packages/nest-demo run build"
+    "build:tsup": "pnpm -C packages/tsup-demo run build",
+    "build:unbuild": "pnpm -C packages/unbuild-demo run build",
+    "build:vite": "pnpm -C packages/vite-demo run build",
+    "build:cli": "pnpm -C packages/cli-demo run build",
+    "build:nest": "pnpm -C packages/nest-demo run build",
+    "release": "pnpm build && bumpp -r",
+    "prepublish": "pnpm build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.25",
