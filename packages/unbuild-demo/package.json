@@ -1,7 +1,7 @@
 {
   "name": "unbuild-demo",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "unbuild demo",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
