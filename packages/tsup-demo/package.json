@@ -1,7 +1,7 @@
 {
   "name": "tsup-demo",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "tsup demo",
   "author": "Chris <https://github.com/zyyv>",
   "license": "MIT",
