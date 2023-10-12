@@ -1,14 +1,13 @@
 import { useState } from 'react'
+import { isArray } from 'nest-demo'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { isArray } from 'nest-demo'
 
 function App() {
   const [count, setCount] = useState(0)
 
-  console.log(isArray([]));
-  
+  console.log(isArray([]))
 
   return (
     <>

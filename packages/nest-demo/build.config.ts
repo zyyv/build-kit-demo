@@ -24,5 +24,5 @@ export default defineBuildConfig([
       emitCJS: true,
     },
     failOnWarn: false,
-  }
+  },
 ])
