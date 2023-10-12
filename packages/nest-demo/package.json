@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue-component-demo",
+  "name": "nest-demo",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -8,8 +8,5 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "vue": "^3.3.4"
   }
 }

@@ -2,10 +2,10 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["esnext", "dom"],
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
     "types": [
       "vite/client"
-    ]
+    ],
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }

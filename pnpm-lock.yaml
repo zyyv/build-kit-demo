@@ -57,6 +57,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
 
+  packages/nest-demo: {}
+
   packages/tsup-demo: {}
 
   packages/unbuild-demo: {}
@@ -74,12 +76,6 @@ importers:
         version: 18.2.0
 
   packages/vite-vue-component-demo:
-    dependencies:
-      vue:
-        specifier: ^3.3.4
-        version: 3.3.4
-
-  playground/new/test:
     dependencies:
       vue:
         specifier: ^3.3.4

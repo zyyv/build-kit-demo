@@ -1,10 +1,11 @@
+import path from 'node:path'
+import process from 'node:process'
 import consola from 'consola'
 import cac from 'cac'
-import { version } from '../package.json'
 import * as p from '@clack/prompts'
 import color from 'picocolors'
 import fs from 'fs-extra'
-import path from 'path'
+import { version } from '../package.json'
 import { sleep } from '.'
 
 startCli().catch(consola.error)
@@ -26,20 +27,20 @@ async function startCli(cwd = process.cwd()) {
     .option('-a, --all', 'Clear all')
     .option('-s, --select <file>', 'Clear select file')
     .action(async (options) => {
-      console.log(options);
+      console.log(options)
 
       if (options.select) {
-        console.log('remove file: ', path.resolve(cwd, options.select));
+        console.log('remove file: ', path.resolve(cwd, options.select))
         await fs.remove(path.resolve(cwd, options.select))
         p.log.success(`Clear ${options.select} success!`)
       }
 
-      if(options.all) {
+      if (options.all) {
         const confirm = await p.confirm({
           message: 'Are you sure you want to clear all files?',
-          initialValue: false
+          initialValue: false,
         })
-        if(confirm) {
+        if (confirm) {
           await fs.remove(cwd)
           p.log.success('Clear all success!')
         }
@@ -61,7 +62,7 @@ async function promptUI(cwd: string) {
   p.intro(color.bold('Welcome to use cli-demo UI!'))
 
   const project = await cmdProcess()
-  console.log(project);
+  console.log(project)
 
   await createProject(project, cwd)
 
@@ -130,15 +131,16 @@ async function cmdProcess() {
 }
 
 async function createProject(project: Project, cwd: string) {
-  const { name, framework, congfig } = project
+  const { name } = project
   const projectPath = `${cwd}/${name as string}`
   if (fs.existsSync(projectPath)) {
     consola.error('The project already exists')
     process.exit(1)
-  } else {
+  }
+  else {
     await fs.mkdir(projectPath)
     await fs.copy(copyAimPath, projectPath, {
-      filter: (src) => !src.includes('node_modules')
+      filter: src => !src.includes('node_modules'),
     })
   }
 }

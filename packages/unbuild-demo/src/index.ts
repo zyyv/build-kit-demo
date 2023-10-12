@@ -1,4 +1,5 @@
 import type { Noop } from './types'
+
 export * from './types'
 
 export function diff(a: number, b: number) {
@@ -6,5 +7,3 @@ export function diff(a: number, b: number) {
 }
 
 export const noop: Noop = () => { }
-
-

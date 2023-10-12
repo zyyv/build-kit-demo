@@ -5,10 +5,16 @@
     "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "node",
+    "paths": {
+      "cli-demo/*": ["./packages/cli-demo/src/index"],
+      "tsup-demo/*": ["./packages/tsup-demo/src/index"],
+      "vite-demo/*": ["./packages/vite-demo/src/index"],
+      "unbuild-demo/*": ["./packages/unbuild-demo/src/index"]
+    },
     "resolveJsonModule": true,
     "types": [
       "node",
-      "vite/client",
+      "vite/client"
     ],
     "strict": true,
     "strictNullChecks": true,
@@ -19,6 +25,7 @@
   "exclude": [
     "**/dist/**",
     "**/node_modules/**",
-    "eslint.config.js"
+    "eslint.config.js",
+    "**/bin/**"
   ]
 }
