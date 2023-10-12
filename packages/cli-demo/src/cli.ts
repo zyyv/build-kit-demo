@@ -7,17 +7,11 @@ import color from 'picocolors'
 import fs from 'fs-extra'
 import { version } from '../package.json'
 import { sleep } from '.'
-
-startCli().catch(consola.error)
-
-interface Project {
-  name: string | symbol
-  framework: string | symbol
-  congfig: string[] | symbol
-  install: boolean | symbol
-}
+import type { Project } from './types'
 
 const copyAimPath = path.resolve(__dirname, '../../vite-vue-component-demo')
+
+startCli().catch(consola.error)
 
 async function startCli(cwd = process.cwd()) {
   const cli = cac('cli-demo')
