@@ -13,7 +13,7 @@
     "build:vite": "pnpm -C packages/vite-demo run build",
     "build:cli": "pnpm -C packages/cli-demo run build",
     "build:nest": "pnpm -C packages/nest-demo run build",
-    "release": "pnpm build && bumpp -r",
+    "release": "bumpp -r && pnpm build",
     "prepublish": "pnpm build"
   },
   "devDependencies": {
