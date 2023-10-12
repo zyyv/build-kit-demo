@@ -79,6 +79,12 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4
 
+  playground/new/test:
+    dependencies:
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
+
   playground/vite-use-pkgs-demo:
     dependencies:
       react:

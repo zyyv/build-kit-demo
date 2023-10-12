@@ -1,10 +1,11 @@
 import consola from 'consola'
-import cac, { Command } from 'cac'
+import cac from 'cac'
 import { version } from '../package.json'
 import * as p from '@clack/prompts'
 import color from 'picocolors'
 import fs from 'fs-extra'
 import path from 'path'
+import { sleep } from '.'
 
 startCli().catch(consola.error)
 
@@ -126,11 +127,6 @@ async function cmdProcess() {
       },
     },
   )
-}
-
-
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
 async function createProject(project: Project, cwd: string) {
