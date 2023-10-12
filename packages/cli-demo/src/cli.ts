@@ -6,8 +6,8 @@ import * as p from '@clack/prompts'
 import color from 'picocolors'
 import fs from 'fs-extra'
 import { version } from '../package.json'
-import { sleep } from '.'
 import type { Project } from './types'
+import { sleep } from '.'
 
 const copyAimPath = path.resolve(__dirname, '../../vite-vue-component-demo')
 

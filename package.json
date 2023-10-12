@@ -12,7 +12,8 @@
     "build:tsup": "npm -C packages/tsup-demo run build",
     "build:unbuild": "npm -C packages/unbuild-demo run build",
     "build:vite": "npm -C packages/vite-demo run build",
-    "build:cli": "npm -C packages/cli-demo run build"
+    "build:cli": "npm -C packages/cli-demo run build",
+    "build:nest": "npm -C packages/nest-demo run build"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.25",

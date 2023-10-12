@@ -1,12 +1,49 @@
 {
   "name": "nest-demo",
-  "version": "1.0.0",
-  "description": "",
-  "author": "",
-  "license": "ISC",
-  "keywords": [],
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "nest demo",
+  "author": "Chris <https://github.com/zyyv>",
+  "license": "MIT",
+  "homepage": "https://github.com/zyyv/build-kit-demo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyyv/build-kit-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zyyv/build-kit-demo/issues"
+  },
+  "keywords": [
+    "build-kit",
+    "nest"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "unbuild --stub",
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "unbuild-demo": "workspace:*",
+    "vite-demo": "workspace:*"
   }
 }

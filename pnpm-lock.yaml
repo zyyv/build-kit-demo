@@ -20,6 +20,9 @@ importers:
       bumpp:
         specifier: ^9.2.0
         version: 9.2.0
+      cli-demo:
+        specifier: workspace:*
+        version: link:packages/cli-demo
       eslint:
         specifier: ^8.51.0
         version: 8.51.0
@@ -32,15 +35,24 @@ importers:
       tsup:
         specifier: ^7.2.0
         version: 7.2.0(typescript@5.2.2)
+      tsup-demo:
+        specifier: workspace:*
+        version: link:packages/tsup-demo
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
       unbuild:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.2.2)
+      unbuild-demo:
+        specifier: workspace:*
+        version: link:packages/unbuild-demo
       vite:
         specifier: ^4.4.11
         version: 4.4.11(@types/node@20.8.4)
+      vite-demo:
+        specifier: workspace:*
+        version: link:packages/vite-demo
 
   packages/cli-demo:
     dependencies:
@@ -57,11 +69,20 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
 
-  packages/nest-demo: {}
+  packages/nest-demo:
+    dependencies:
+      unbuild-demo:
+        specifier: workspace:*
+        version: link:../unbuild-demo
+      vite-demo:
+        specifier: workspace:*
+        version: link:../vite-demo
 
   packages/tsup-demo: {}
 
   packages/unbuild-demo: {}
+
+  packages/virtual-demo: {}
 
   packages/vite-demo:
     devDependencies:
@@ -83,6 +104,9 @@ importers:
 
   playground/vite-use-pkgs-demo:
     dependencies:
+      nest-demo:
+        specifier: workspace:*
+        version: link:../../packages/nest-demo
       react:
         specifier: ^18.2.0
         version: 18.2.0

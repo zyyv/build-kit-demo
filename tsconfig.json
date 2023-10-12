@@ -9,7 +9,10 @@
       "cli-demo/*": ["./packages/cli-demo/src/index"],
       "tsup-demo/*": ["./packages/tsup-demo/src/index"],
       "vite-demo/*": ["./packages/vite-demo/src/index"],
-      "unbuild-demo/*": ["./packages/unbuild-demo/src/index"]
+      "virtual-demo/*": ["./packages/nest-demo/src/index"],
+      "nest-demo/*": ["./packages/nest-demo/src/index"],
+      "unbuild-demo/*": ["./packages/unbuild-demo/src/index"],
+      "unbuild-demo/utils": ["./packages/unbuild-demo/src/utils"]
     },
     "resolveJsonModule": true,
     "types": [
